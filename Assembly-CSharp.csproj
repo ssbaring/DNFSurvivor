@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\3.Script\Player\PlayerController.cs" />
+    <Compile Include="Assets\3.Script\Player\PlayerSkill\WeaponMasterSkill.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

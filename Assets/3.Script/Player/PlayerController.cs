@@ -7,12 +7,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float MoveSpeed;           //캐릭터 속도
     [SerializeField] private GameObject Player;         //캐릭터 오브젝트
 
+    private Animator anim;
     public Vector2 InputVector;
     Rigidbody2D rigid;
 
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -25,5 +27,30 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 nextVector = InputVector.normalized * MoveSpeed * Time.fixedDeltaTime;          //물리프레임 하나가 소모한 시간만큼
         rigid.MovePosition(rigid.position + nextVector);        //위치 이동
+    }
+
+    private void LateUpdate()
+    {
+        TurnCharacter();
+        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        {
+            anim.SetBool("IsWalking", true);
+        }
+        else
+        {
+            anim.SetBool("IsWalking", false);
+        }
+    }
+
+    private void TurnCharacter()    //캐릭터 좌우 돌기
+    {
+        if(InputVector.x < 0)
+        {
+            Player.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if(InputVector.x > 0)
+        {
+            Player.transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 }
