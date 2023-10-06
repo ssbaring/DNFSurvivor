@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject Player;         //캐릭터 오브젝트
 
     private Animator anim;
+    private SpriteRenderer sprite;
     public Vector2 InputVector;
     Rigidbody2D rigid;
 
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -46,11 +48,11 @@ public class PlayerController : MonoBehaviour
     {
         if(InputVector.x < 0)
         {
-            Player.transform.localScale = new Vector3(-1, 1, 1);
+            sprite.flipX = true;
         }
         else if(InputVector.x > 0)
         {
-            Player.transform.localScale = new Vector3(1, 1, 1);
+            sprite.flipX = false;
         }
     }
 }

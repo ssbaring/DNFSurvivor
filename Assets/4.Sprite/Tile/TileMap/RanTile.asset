@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
+  m_Name: RanTile
+  m_EditorClassIdentifier: 
+  m_DefaultSprite: {fileID: -5233512828908260958, guid: 1c3cef6ed8f263545b1cfa37179ead46, type: 3}
+  m_DefaultGameObject: {fileID: 0}
+  m_DefaultColliderType: 1
+  m_TilingRules:
+  - m_Id: 1
+    m_Sprites:
+    - {fileID: -6519111396178722930, guid: 1c3cef6ed8f263545b1cfa37179ead46, type: 3}
+    - {fileID: -5304940498723720264, guid: 1c3cef6ed8f263545b1cfa37179ead46, type: 3}
+    - {fileID: -5233512828908260958, guid: 1c3cef6ed8f263545b1cfa37179ead46, type: 3}
+    - {fileID: -1333397687957773085, guid: 1c3cef6ed8f263545b1cfa37179ead46, type: 3}
+    - {fileID: 7913761298055792127, guid: 1c3cef6ed8f263545b1cfa37179ead46, type: 3}
+    - {fileID: 1150484138138771588, guid: 1c3cef6ed8f263545b1cfa37179ead46, type: 3}
+    - {fileID: -6052383861389844148, guid: 1c3cef6ed8f263545b1cfa37179ead46, type: 3}
+    - {fileID: 2710384566151579511, guid: 1c3cef6ed8f263545b1cfa37179ead46, type: 3}
+    - {fileID: 5175211428452132647, guid: 1c3cef6ed8f263545b1cfa37179ead46, type: 3}
+    - {fileID: -8518063296010493290, guid: 164f1683fdb6f3f4eab92f6a59dd0c5c, type: 3}
+    - {fileID: -8871038989383191861, guid: 164f1683fdb6f3f4eab92f6a59dd0c5c, type: 3}
+    m_GameObject: {fileID: 0}
+    m_MinAnimationSpeed: 1
+    m_MaxAnimationSpeed: 1
+    m_PerlinScale: 0.428
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 0
+    m_Neighbors: 
+    m_NeighborPositions: []
+    m_RuleTransform: 0
