@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class RepositionGround : MonoBehaviour
 {
-
+    Collider2D coll;        //모든 Collider2D 포함
+    private void Awake()
+    {
+        coll = GetComponent<Collider2D>();
+    }
     private void OnTriggerExit2D(Collider2D col)
     {
         if (!col.CompareTag("Area"))
@@ -31,6 +35,12 @@ public class RepositionGround : MonoBehaviour
                 else if (diffX < diffY)
                 {
                     transform.Translate(Vector3.up * dirY * 40);
+                }
+                break;
+            case "Enemy":
+                if (coll.enabled)
+                {
+                    transform.Translate(playerDir * 25 + new Vector3(Random.Range(-3f, 3f), Random.Range(-3f, 3f), 0f));
                 }
                 break;
         }

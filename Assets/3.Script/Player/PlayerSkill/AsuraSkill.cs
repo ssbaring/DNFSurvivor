@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class AsuraSkill : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float damage;
+    public int per;             //°üÅë
 
-    // Update is called once per frame
-    void Update()
+    public void Init(float damage, int per)
     {
-        
+        this.damage = damage;
+        this.per = per;         
     }
 }
