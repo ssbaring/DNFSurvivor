@@ -1,123 +1,123 @@
 Using pre-set license
 Built from '2020.3/support/zd130524' branch; Version is '2020.3.36f1 (71f96b79b9f0) revision 7469419'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ko' Physical Memory: 32683 MB
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ko' Physical Memory: 15721 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-E:\unity\2020.3.36f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.3.36f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-E:/Project/2D_Project/DNFSurviver
+C:/Users/KGA/Desktop/BBBBBA/Unity/2DProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-2640
-Successfully changed project path to: E:/Project/2D_Project/DNFSurviver
-E:/Project/2D_Project/DNFSurviver
+5713
+Successfully changed project path to: C:/Users/KGA/Desktop/BBBBBA/Unity/2DProject
+C:/Users/KGA/Desktop/BBBBBA/Unity/2DProject
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 43.44 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 36.55 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.36f1 (71f96b79b9f0)
-[Subsystems] Discovering subsystems at path E:/unity/2020.3.36f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path E:/Project/2D_Project/DNFSurviver/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.36f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/KGA/Desktop/BBBBBA/Unity/2DProject/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c03)
+    Renderer: AMD Radeon(TM) Graphics (ID=0x1638)
     Vendor:   
-    VRAM:     6043 MB
-    Driver:   31.0.15.3623
+    VRAM:     7860 MB
+    Driver:   31.0.12002.92
 Initialize mono
-Mono path[0] = 'E:/unity/2020.3.36f1/Editor/Data/Managed'
-Mono path[1] = 'E:/unity/2020.3.36f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'E:/unity/2020.3.36f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56432
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.36f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.36f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.36f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56936
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: E:/unity/2020.3.36f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001463 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.36f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001568 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 42.50 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 34.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.501 seconds
+- Completed reload, in  0.424 seconds
 Domain Reload Profiling:
-	ReloadAssembly (501ms)
-		BeginReloadAssembly (70ms)
+	ReloadAssembly (424ms)
+		BeginReloadAssembly (49ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (374ms)
-			LoadAssemblies (70ms)
+		EndReloadAssembly (323ms)
+			LoadAssemblies (48ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (113ms)
+			SetupTypeCache (99ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (22ms)
-			SetupLoadedEditorAssemblies (146ms)
+			RebuildScriptCaches (19ms)
+			SetupLoadedEditorAssemblies (128ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (43ms)
-				BeforeProcessingInitializeOnLoad (14ms)
-				ProcessInitializeOnLoadAttributes (64ms)
-				ProcessInitializeOnLoadMethodAttributes (22ms)
+				RefreshPlugins (35ms)
+				BeforeProcessingInitializeOnLoad (12ms)
+				ProcessInitializeOnLoadAttributes (57ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004121 seconds.
+Registered in 0.002529 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 39.08 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 35.58 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.921 seconds
+- Completed reload, in  0.789 seconds
 Domain Reload Profiling:
-	ReloadAssembly (922ms)
-		BeginReloadAssembly (134ms)
+	ReloadAssembly (790ms)
+		BeginReloadAssembly (105ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (17ms)
-		EndReloadAssembly (743ms)
-			LoadAssemblies (110ms)
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (642ms)
+			LoadAssemblies (74ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (231ms)
+			SetupTypeCache (196ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (43ms)
-			SetupLoadedEditorAssemblies (287ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (267ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (39ms)
+				RefreshPlugins (36ms)
 				BeforeProcessingInitializeOnLoad (65ms)
-				ProcessInitializeOnLoadAttributes (159ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
-				AfterProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (143ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (1ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2238 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 98.2 MB.
-System memory in use after: 98.1 MB.
+System memory in use after: 98.2 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 2670.
-Total: 2.945200 ms (FindLiveObjects: 0.206200 ms CreateObjectMapping: 0.087200 ms MarkObjects: 2.534300 ms  DeleteObjects: 0.116900 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 2671.
+Total: 2.437500 ms (FindLiveObjects: 0.139600 ms CreateObjectMapping: 0.053700 ms MarkObjects: 2.124600 ms  DeleteObjects: 0.119200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,7 +131,229 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/2.Model/Prefabs/SoulBringerSkill.prefab
-  artifactKey: Guid(9532c07296de60d4db539b234b9e3277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2.Model/Prefabs/SoulBringerSkill.prefab using Guid(9532c07296de60d4db539b234b9e3277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbff76fd4bf325cc40c48b50eb593bb2') in 0.112483 seconds 
+  path: Assets/4.Sprite/Skill
+  artifactKey: Guid(9c95d05d83eb2a744b8dcb817402c784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Skill using Guid(9c95d05d83eb2a744b8dcb817402c784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeeee51282618a9798fd3967e52b349b') in 0.008575 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.442336 seconds.
+  path: Assets/4.Sprite/Skill/Skill_Icon
+  artifactKey: Guid(1876267b871bb2942bdee7d336e675d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Skill/Skill_Icon using Guid(1876267b871bb2942bdee7d336e675d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8fc4537cda020e4741d36aae658b52a') in 0.006964 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 146.518921 seconds.
+  path: Assets/4.Sprite
+  artifactKey: Guid(e2f1b9bca3c7f6948be77bf15b144f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite using Guid(e2f1b9bca3c7f6948be77bf15b144f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc0ceffcb1f182f9ffc5391e330aa367') in 0.008441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.772762 seconds.
+  path: Assets/4.Sprite/Item
+  artifactKey: Guid(8217c5ef8b8f1ec48b0b3d42d2e99d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Item using Guid(8217c5ef8b8f1ec48b0b3d42d2e99d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6b7cccb199d7583dd6d03c688fdbf9a') in 0.008273 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.807358 seconds.
+  path: Assets/4.Sprite/Item/CooltimePotion.png
+  artifactKey: Guid(09b6c95a162dda848a8501c51a94c1d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Item/CooltimePotion.png using Guid(09b6c95a162dda848a8501c51a94c1d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '837728a54b42f4614c1ec2bad37ab37b') in 0.076727 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.924235 seconds.
+  path: Assets/4.Sprite/Item/DamagePotion.png
+  artifactKey: Guid(7702072f9e5cde144a2977d3e158d422) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Item/DamagePotion.png using Guid(7702072f9e5cde144a2977d3e158d422) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb5a962e2ff2d1fdf09809ef4fecf77b') in 0.011479 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.134630 seconds.
+  path: Assets/4.Sprite/Item/RangePotion.png
+  artifactKey: Guid(09ba6a89e6909e44591811b426794f6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Item/RangePotion.png using Guid(09ba6a89e6909e44591811b426794f6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2417d12561bdc10fe129e2633c41fd44') in 0.011827 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.721466 seconds.
+  path: Assets/4.Sprite/Item/Slot.png
+  artifactKey: Guid(3f6ad5b6b48e40b4f8f443e5d290e31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Item/Slot.png using Guid(3f6ad5b6b48e40b4f8f443e5d290e31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e6f6e8cc2f9fece30dd1227cc817890') in 0.011443 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.663138 seconds.
+  path: Assets/4.Sprite/Item/Slot.png
+  artifactKey: Guid(3f6ad5b6b48e40b4f8f443e5d290e31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Item/Slot.png using Guid(3f6ad5b6b48e40b4f8f443e5d290e31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '687a9670d421c9837710a02a34082aeb') in 0.009963 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.196941 seconds.
+  path: Assets/4.Sprite/Skill/Skill_Icon/Agni(Asura).png
+  artifactKey: Guid(19e85f729b9109f4a8e711b88e6e4886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Skill/Skill_Icon/Agni(Asura).png using Guid(19e85f729b9109f4a8e711b88e6e4886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33d0110aa699d838ebc7e1b7dedd8c78') in 0.011451 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.322512 seconds.
+  path: Assets/4.Sprite/Skill/Skill_Icon/Kalla(Soulbringer).png
+  artifactKey: Guid(947792925641a6a48a9d5c43e9b1888b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Skill/Skill_Icon/Kalla(Soulbringer).png using Guid(947792925641a6a48a9d5c43e9b1888b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99320d41f056bb85460ffc8f7881ca90') in 0.010811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.949715 seconds.
+  path: Assets/4.Sprite/Skill/Skill_Icon/Kalla(Soulbringer).png
+  artifactKey: Guid(947792925641a6a48a9d5c43e9b1888b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Skill/Skill_Icon/Kalla(Soulbringer).png using Guid(947792925641a6a48a9d5c43e9b1888b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32cc4053c60dd357b84f150c9e7ce753') in 0.010800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.411848 seconds.
+  path: Assets/4.Sprite/Skill/Skill_Icon/Agni(Asura).png
+  artifactKey: Guid(19e85f729b9109f4a8e711b88e6e4886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Skill/Skill_Icon/Agni(Asura).png using Guid(19e85f729b9109f4a8e711b88e6e4886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e45bf166dc395ed449ec47f73d991499') in 0.010366 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.612181 seconds.
+  path: Assets/4.Sprite/Skill/Skill_Icon/Agni(Asura).png
+  artifactKey: Guid(19e85f729b9109f4a8e711b88e6e4886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Skill/Skill_Icon/Agni(Asura).png using Guid(19e85f729b9109f4a8e711b88e6e4886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1154e921abbd0172e3b8efbaf84dd94b') in 0.006502 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 62.781374 seconds.
+  path: Assets/4.Sprite/Skill/Skill_Icon/BloodBoom(Berserker).png
+  artifactKey: Guid(74765c4b364882b49902b0f937156744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Skill/Skill_Icon/BloodBoom(Berserker).png using Guid(74765c4b364882b49902b0f937156744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34b58ed8250e4fb81bb1a792c44a7896') in 0.010755 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 62.096095 seconds.
+  path: Assets/4.Sprite/Skill/Skill_Icon/Agni(Asura).png
+  artifactKey: Guid(19e85f729b9109f4a8e711b88e6e4886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Skill/Skill_Icon/Agni(Asura).png using Guid(19e85f729b9109f4a8e711b88e6e4886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79418c69253650e54723ea5f3127a1ea') in 0.006583 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.093571 seconds.
+  path: Assets/4.Sprite/Skill/Skill_Icon/Agni(Asura).png
+  artifactKey: Guid(19e85f729b9109f4a8e711b88e6e4886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Skill/Skill_Icon/Agni(Asura).png using Guid(19e85f729b9109f4a8e711b88e6e4886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cac3405ce42af260ca41a719dd7e1e30') in 0.005959 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.654358 seconds.
+  path: Assets/4.Sprite/Skill/Skill_Icon/Agni(Asura).png
+  artifactKey: Guid(19e85f729b9109f4a8e711b88e6e4886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Skill/Skill_Icon/Agni(Asura).png using Guid(19e85f729b9109f4a8e711b88e6e4886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1966a69cc39740c0565132ffa7a338e8') in 0.006099 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 53.916285 seconds.
+  path: Assets/4.Sprite/Item/Slot.png
+  artifactKey: Guid(3f6ad5b6b48e40b4f8f443e5d290e31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Item/Slot.png using Guid(3f6ad5b6b48e40b4f8f443e5d290e31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de2dbf9fcd5ae26752f9d59c02f17508') in 0.010960 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.614706 seconds.
+  path: Assets/4.Sprite/Item/Slot.png
+  artifactKey: Guid(3f6ad5b6b48e40b4f8f443e5d290e31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Item/Slot.png using Guid(3f6ad5b6b48e40b4f8f443e5d290e31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '516b187cf6be2aa87da09fa039b7096f') in 0.009934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 77.609246 seconds.
+  path: Assets/4.Sprite/Skill/Skill_Icon/Kalla(Soulbringer).png
+  artifactKey: Guid(947792925641a6a48a9d5c43e9b1888b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Skill/Skill_Icon/Kalla(Soulbringer).png using Guid(947792925641a6a48a9d5c43e9b1888b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '773dab396bd79084da80dab3ec2bfe65') in 0.006379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.417206 seconds.
+  path: Assets/4.Sprite/Skill/Skill_Icon/DrawSword(WeaponMaster).png
+  artifactKey: Guid(6aa020afaea79fa48a1b3e13b3ed3657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Skill/Skill_Icon/DrawSword(WeaponMaster).png using Guid(6aa020afaea79fa48a1b3e13b3ed3657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b029f08127ddf334eb350574b08a6afc') in 0.011780 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 635.432949 seconds.
+  path: Assets/4.Sprite/Skill/Skill_Icon/BloodBoom(Berserker).png
+  artifactKey: Guid(74765c4b364882b49902b0f937156744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/Skill/Skill_Icon/BloodBoom(Berserker).png using Guid(74765c4b364882b49902b0f937156744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72e040099027db857249dd13432f0aa9') in 0.007917 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 507.387338 seconds.
+  path: Assets/4.Sprite/UI
+  artifactKey: Guid(56dc0f45f8ee5af47aa306bfa839ae3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI using Guid(56dc0f45f8ee5af47aa306bfa839ae3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fc49340e28cb74213d1c4ee303d5a0e') in 0.006817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.876435 seconds.
+  path: Assets/4.Sprite/UI/ExpSlot.png
+  artifactKey: Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI/ExpSlot.png using Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63159bad036814925ea83edf4080019f') in 0.011224 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.712566 seconds.
+  path: Assets/4.Sprite/UI/ExpSlot.png
+  artifactKey: Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI/ExpSlot.png using Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '670bb46d7ecad53d4ce275419ce812d1') in 0.010414 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 433.172650 seconds.
+  path: Assets/4.Sprite/UI/ExpFill.png
+  artifactKey: Guid(592b8295d22947a4bb8fa49bfb2466ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI/ExpFill.png using Guid(592b8295d22947a4bb8fa49bfb2466ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a57c4f1d0bae12fdd3ac8b3102fd1af') in 0.030549 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 29.447123 seconds.
+  path: Assets/4.Sprite/UI/ExpSlot.png
+  artifactKey: Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI/ExpSlot.png using Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c85ac2d8fc76dc84acc9d7b3e1ec299d') in 0.010841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.946237 seconds.
+  path: Assets/4.Sprite/UI/ExpSlot.png
+  artifactKey: Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI/ExpSlot.png using Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b6a1881561155289a1a8e0f0db5ca65') in 0.010015 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.985799 seconds.
+  path: Assets/4.Sprite/UI/ExpFill.png
+  artifactKey: Guid(592b8295d22947a4bb8fa49bfb2466ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI/ExpFill.png using Guid(592b8295d22947a4bb8fa49bfb2466ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00fec2bced2db19ec3c63bc06407009b') in 0.012148 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 433.584615 seconds.
+  path: Assets/4.Sprite/UI/ExpFill.png
+  artifactKey: Guid(592b8295d22947a4bb8fa49bfb2466ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI/ExpFill.png using Guid(592b8295d22947a4bb8fa49bfb2466ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed17dc1d7cd19f567e84fbb6191db6d8') in 0.012207 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.736494 seconds.
+  path: Assets/4.Sprite/UI/ExpSlot.png
+  artifactKey: Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI/ExpSlot.png using Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dff6f1b70753514d2332b91bf31147e') in 0.010214 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.972225 seconds.
+  path: Assets/4.Sprite/UI/ExpSlot.png
+  artifactKey: Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI/ExpSlot.png using Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6cdef0af752852bd76e56c7cdcee6f5') in 0.006361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.929237 seconds.
+  path: Assets/4.Sprite/UI/ExpSlot.png
+  artifactKey: Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI/ExpSlot.png using Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93cc121ecbc88fb8d4ffe91c3c1d8500') in 0.006094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 158.537883 seconds.
+  path: Assets/4.Sprite/UI/ExpFill.png
+  artifactKey: Guid(592b8295d22947a4bb8fa49bfb2466ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI/ExpFill.png using Guid(592b8295d22947a4bb8fa49bfb2466ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fbae8491a8f23f0bde5955316bb29bd') in 0.006905 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.718036 seconds.
+  path: Assets/4.Sprite/UI/ExpFill.png
+  artifactKey: Guid(592b8295d22947a4bb8fa49bfb2466ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI/ExpFill.png using Guid(592b8295d22947a4bb8fa49bfb2466ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '917d48aaf7ca355bcb38444c999a4e46') in 0.019112 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.818474 seconds.
+  path: Assets/4.Sprite/UI/ExpSlot.png
+  artifactKey: Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI/ExpSlot.png using Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c71ec3244a6878a8af92fe13ed04002') in 0.012507 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.196316 seconds.
+  path: Assets/4.Sprite/UI/ExpSlot.png
+  artifactKey: Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/4.Sprite/UI/ExpSlot.png using Guid(ed91a6c5a76c0b649bcdf478c73d637e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8596d2c06dbbcbec221d0b08e8e5cac') in 0.005878 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

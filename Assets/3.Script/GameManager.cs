@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public Skill skill;
 
     public float gameTime;
-    public float maxgameTime = 5 * 10f;
+    public float maxgameTime = 5 * 60f;
 
     public GameObject BSkill;
     public GameObject WSkill;

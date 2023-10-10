@@ -6,22 +6,18 @@ public class WeaponMasterSkill : MonoBehaviour
 {
     private Animator WMSkill;
     private CapsuleCollider2D Capcol;
+
     private void Awake()
     {
         WMSkill = GetComponent<Animator>();
         Capcol = GetComponent<CapsuleCollider2D>();
     }
 
-
-
     private void Start()
     {
-        Capcol.enabled = false;
         StopCoroutine(Skill());
         StartCoroutine(Skill());
     }
-
-
 
     private IEnumerator Skill()
     {
@@ -30,13 +26,13 @@ public class WeaponMasterSkill : MonoBehaviour
 
         while (true)
         {
-            Capcol.enabled = false;                //스킬 이펙트가 없을 시 콜라이더 비활성화
-            WMSkill.SetBool("IsFinish", true);     //스킬 끝난 상태 true(끝)
-            yield return cooltime;
-
             Capcol.enabled = true;                 //스킬 이펙트가 있을 시 콜라이더 활성화
             WMSkill.SetBool("IsFinish", false);    //스킬 끝난 상태 false(시작)
             yield return skilltime;
+
+            Capcol.enabled = false;                //스킬 이펙트가 없을 시 콜라이더 비활성화
+            WMSkill.SetBool("IsFinish", true);     //스킬 끝난 상태 true(끝)
+            yield return cooltime;
         }
 
     }

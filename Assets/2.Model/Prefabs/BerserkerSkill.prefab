@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 5091020026847964768}
   - component: {fileID: 5091020026847964769}
   - component: {fileID: 5091020026847964781}
+  - component: {fileID: -2081193538351352591}
   - component: {fileID: 5091020026847964770}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: BerserkerSkill
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1959118745
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -116,6 +117,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e991efb34088645b87a59f41300581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2081193538351352591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5091020026847964774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7a2e11a0d703d4a9eeec53f90de8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  per: 0
 --- !u!70 &5091020026847964770
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

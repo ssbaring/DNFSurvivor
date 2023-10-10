@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2225040427482721293}
   - component: {fileID: 2225040427482721292}
   - component: {fileID: 2225040427482721291}
+  - component: {fileID: -2962632100709431411}
   - component: {fileID: 723485988645261138}
   - component: {fileID: -3667307856719245643}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: WeaponMasterSkill
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -27,8 +28,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2225040427482721294}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,6 +98,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fe2486c1fba2d44b262331244bddb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2962632100709431411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2225040427482721294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7a2e11a0d703d4a9eeec53f90de8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  per: 0
 --- !u!70 &723485988645261138
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -65,8 +65,10 @@ public class EnemyControl : MonoBehaviour
         {
             return;
         }
-
-        HP -= collision.GetComponent<AsuraSkill>().damage;
+        
+        
+        HP -= collision.GetComponent<SkillManager>().damage;
+        //HP -= collision.GetComponent<WeaponMasterSkill>().damage;
 
         if(HP>0)
         {

@@ -22,7 +22,7 @@ public class BerserkerSkill : MonoBehaviour
 
     private IEnumerator Skill()
     {
-        WaitForSeconds cooltime = new WaitForSeconds(3);
+        WaitForSeconds cooltime = new WaitForSeconds(5);
         WaitForSeconds skillframe = new WaitForSeconds(0.084f);
 
         while (true)

@@ -10,13 +10,16 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sprite;
     public Vector2 InputVector;
-    Rigidbody2D rigid;
+    private Rigidbody2D rigid;
+    public Scanner scan;
+
 
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        scan = GetComponent<Scanner>();
     }
 
     private void Update()

@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 3117021814899693493}
   - component: {fileID: 3117021814899693492}
   - component: {fileID: 3117021814899693494}
-  - component: {fileID: 3117021814899693495}
+  - component: {fileID: 6493138538854887744}
+  - component: {fileID: 6372655181314103841}
   m_Layer: 0
   m_Name: SoulBringerSkill
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +101,28 @@ CapsuleCollider2D:
   m_Offset: {x: 0.13, y: -0.05}
   m_Size: {x: 1.12, y: 0.75}
   m_Direction: 1
---- !u!114 &3117021814899693495
+--- !u!50 &6493138538854887744
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3117021814899693482}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &6372655181314103841
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,6 +131,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3117021814899693482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b6397b9a23b8cf459bf1bc882ebbd34, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c7a2e11a0d703d4a9eeec53f90de8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
+  per: 0
