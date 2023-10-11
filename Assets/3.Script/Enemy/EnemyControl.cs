@@ -78,7 +78,7 @@ public class EnemyControl : MonoBehaviour
 
         HP -= collision.GetComponent<SkillManager>().damage;
         StartCoroutine(KnockBack());
-
+        
 
         if (HP > 0)
         {
