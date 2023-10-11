@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour
 
 
 
-    private int level;
+    public int level;
     private float timer;
     private void Awake()
     {
@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        level = Mathf.FloorToInt(GameManager.instance.gameTime / 60f);          //게임 시간에 따른 레벨 증가(소수점 버림)
+        level = Mathf.FloorToInt(GameManager.instance.gameTime / 10f);          //게임 시간에 따른 레벨 증가(소수점 버림)
         if (timer > spawndata[level].spawnTime)
         {
             timer = 0;
@@ -42,4 +42,5 @@ public class SpawnData      //몹 데이터
     public int spriteType;      //타입에 따른 몬스터 종류
     public int HP;
     public float speed;
+    public int damage;
 }

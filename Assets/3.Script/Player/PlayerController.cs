@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigid;
     public Scanner scan;
 
+    WaitForFixedUpdate wfu = new WaitForFixedUpdate();
 
     private void Awake()
     {
@@ -57,5 +58,20 @@ public class PlayerController : MonoBehaviour
         {
             sprite.flipX = false;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Hit");
+            StartCoroutine(HPHit());
+        }
+    }
+
+    private IEnumerator HPHit()
+    {
+        yield return wfu;
+        GameManager.instance.HPDown();
     }
 }

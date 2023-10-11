@@ -64,11 +64,13 @@
     <Compile Include="Assets\3.Script\GameManager.cs" />
     <Compile Include="Assets\3.Script\Player\PlayerSkill\BerserkerSkill.cs" />
     <Compile Include="Assets\3.Script\Player\PlayerSkill\SoulbringerSkill.cs" />
+    <Compile Include="Assets\3.Script\ETC\Scanner.cs" />
     <Compile Include="Assets\3.Script\ETC\RepositionGround.cs" />
     <Compile Include="Assets\3.Script\Player\PlayerSkill\WeaponMasterSkill.cs" />
     <Compile Include="Assets\3.Script\Enemy\EnemyControl.cs" />
     <Compile Include="Assets\3.Script\Player\PlayerSkill\SkillManager.cs" />
-    <Compile Include="Assets\3.Script\ETC\Scanner.cs" />
+    <Compile Include="Assets\3.Script\ETC\UI.cs" />
+    <Compile Include="Assets\3.Script\ETC\HPFollow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
