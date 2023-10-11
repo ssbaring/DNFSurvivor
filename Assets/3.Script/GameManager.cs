@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Die");
             //PlayerHP = 0;
-            //StartCoroutine(DeadAnimation());
+            StartCoroutine(DeadAnimation());
         }
     }
 
