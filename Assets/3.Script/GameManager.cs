@@ -8,11 +8,11 @@ public class GameManager : MonoBehaviour
     public PlayerController player;
     public PoolManager pool;
     public Spawner Enemy;
-
+    public Collider2D col;
 
     [Header("GameTime")]
     public float gameTime;
-    public float maxgameTime = 5 * 10f;
+    public float maxgameTime = 5 * 60f;
 
     [Header("PlayerInfo")]
     public int PlayerHP = 100;
@@ -22,6 +22,11 @@ public class GameManager : MonoBehaviour
     public int exp;
     public int[] NextExp = new int[35];
 
+    [Header("GameObject")]
+    public LevelUP levelupUI;
+    public static bool IsPause = false;
+
+
 
     private void Awake()
     {
@@ -29,8 +34,13 @@ public class GameManager : MonoBehaviour
         SetExp();
         PlayerHP = PlayerMaxHP;
         Enemy.GetComponent<Spawner>();
+        col.GetComponent<Collider2D>();
     }
 
+    private void Start()
+    {
+        levelupUI.Select(0);
+    }
 
     private void Update()
     {
@@ -39,6 +49,17 @@ public class GameManager : MonoBehaviour
         {
             gameTime = maxgameTime;
         }
+
+        /*if(IsPause)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }*/
         DevMode();
     }
 
@@ -49,7 +70,7 @@ public class GameManager : MonoBehaviour
         NextExp[0] = 10;
         for (int level = 0; level < NextExp.Length - 1; level++)
         {
-            NextExp[level + 1] = NextExp[level] + 10;
+            NextExp[level + 1] = NextExp[level] + 2;
         }
     }
 
@@ -57,10 +78,11 @@ public class GameManager : MonoBehaviour
     {
         exp++;
 
-        if (exp == NextExp[level])
+        if (exp == NextExp[Mathf.Min(level,NextExp.Length - 1)])
         {
             level++;
             exp = 0;
+            levelupUI.Show();
         }
     }
 
@@ -87,7 +109,24 @@ public class GameManager : MonoBehaviour
             player.transform.position -= new Vector3(0, Time.deltaTime, 0);
             yield return null;
         }
+        col.enabled = false;
+
     }
+
+
+    public void Stop()
+    {
+        IsPause = true;
+        Time.timeScale = 0f;
+    }
+
+    public void Resume()
+    {
+        IsPause = false;
+        Time.timeScale = 1f;
+    }
+
+
 
     //개발자 모드
     private void DevMode()

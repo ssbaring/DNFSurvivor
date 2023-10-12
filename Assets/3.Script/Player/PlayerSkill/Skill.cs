@@ -10,15 +10,15 @@ public class Skill : MonoBehaviour
     public int count;
     public float speed;
     public float shotdelay;
-    public float WMCoolTime;
-    public float BSKCoolTime;
+
+    private int WMLevel = 0;
+    private float WMCoolTime;
+    private float BSKCoolTime;
 
     private PlayerController player;
-    private SpriteRenderer spriteR;
 
     private void Awake()
     {
-        spriteR = GetComponent<SpriteRenderer>();
         player = GameManager.instance.player;
     }
 
@@ -31,40 +31,29 @@ public class Skill : MonoBehaviour
                 break;
             case 1:
                 WMCoolTime += Time.deltaTime;
-                if (count >= 2)
+                if (WMCoolTime > speed)
                 {
-                    if (WMCoolTime > speed)
+                    WMCoolTime = 0;
+                    if (WMLevel <= 1)
                     {
-                        WMCoolTime = 0;
                         WeaponMaster();
-                        if (WMCoolTime > 0.3f)
-                        {
-                            WMCoolTime = 0;
-                            WeaponMaster();
-                        }
                     }
-                }
-                else
-                {
-                    if (WMCoolTime > speed)
+                    else if (WMLevel > 1)
                     {
-                        WMCoolTime = 0;
-                        WeaponMaster();
+                        StartCoroutine(ActiveTwice());
                     }
                 }
 
                 if (player.InputVector.x < 0)
                 {
-                    //GameObject skill = new GameObject();
-                    spriteR.flipX = true;
+                    transform.localRotation = Quaternion.Euler(0f, -180f, 0f);
                     transform.localPosition = Vector3.left;
                 }
                 else if (player.InputVector.x > 0)
                 {
-                    spriteR.flipX = false;
+                    transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
                     transform.localPosition = Vector3.right;
                 }
-
                 break;
             case 2:
                 BSKCoolTime += Time.deltaTime;
@@ -92,15 +81,20 @@ public class Skill : MonoBehaviour
 
     public void LevelUP(float damage, int count)
     {
-        //int level = 0;
-        this.damage += damage;
+        this.damage = damage;
         this.count += count;
-
-        if (id == 0)
+        switch (id)
         {
-            Asura();
-        }
+            case 0:
+                Asura();
+                break;
+            case 1:
+                WMLevel++;
+                Debug.Log(WMLevel);
+                WeaponMaster();
+                break;
 
+        }
         player.BroadcastMessage("Apply", SendMessageOptions.DontRequireReceiver);       //이후에 스킬을 찍어도 포션이 적용됨
     }
 
@@ -133,11 +127,9 @@ public class Skill : MonoBehaviour
                 break;
             case 1:
                 speed = 3f;
-                WeaponMaster();
                 break;
             case 2:
                 speed = 5f;
-                Berserker();
                 break;
             case 3:
                 speed = 1f;
@@ -187,13 +179,18 @@ public class Skill : MonoBehaviour
             WeaponMaster.parent = transform;
 
             WeaponMaster.localPosition = Vector3.zero;
+            WeaponMaster.localRotation = Quaternion.identity;
 
-            //WeaponMaster.Translate(Vector3.right, Space.World);
 
             WeaponMaster.GetComponent<SkillManager>().Init(damage, -1);
         }
+    }
 
-
+    private IEnumerator ActiveTwice()
+    {
+        WeaponMaster();
+        yield return new WaitForSeconds(0.5f);
+        WeaponMaster();
     }
 
     private void Berserker()

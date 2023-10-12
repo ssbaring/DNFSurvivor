@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        level = Mathf.FloorToInt(GameManager.instance.gameTime / 10f);          //게임 시간에 따른 레벨 증가(소수점 버림)
+        level = Mathf.FloorToInt(GameManager.instance.gameTime / 60f);          //게임 시간에 따른 레벨 증가(소수점 버림)
         if (timer > spawndata[level].spawnTime)
         {
             timer = 0;

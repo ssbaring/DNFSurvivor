@@ -46,7 +46,7 @@ public class UI : MonoBehaviour
     private void Exp()
     {
         float currentExp = GameManager.instance.exp;
-        float nextExp = GameManager.instance.NextExp[GameManager.instance.level];
+        float nextExp = GameManager.instance.NextExp[Mathf.Min(GameManager.instance.level,GameManager.instance.NextExp.Length - 1)];
         ExpBar.value = currentExp / nextExp;
     }
 
