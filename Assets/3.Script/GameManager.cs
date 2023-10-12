@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -9,12 +11,14 @@ public class GameManager : MonoBehaviour
     public PoolManager pool;
     public Spawner Enemy;
     public Collider2D col;
+    
 
     [Header("GameTime")]
     public float gameTime;
     public float maxgameTime = 5 * 60f;
 
     [Header("PlayerInfo")]
+    public int playerID;
     public int PlayerHP = 100;
     public int PlayerMaxHP = 100;
     public int level;
@@ -25,52 +29,78 @@ public class GameManager : MonoBehaviour
     [Header("GameObject")]
     public LevelUP levelupUI;
     public static bool IsPause = false;
+    public bool IsLive;
 
 
 
-    private void Awake()
+    public void Awake()
     {
-        instance = this;
-        SetExp();
-        PlayerHP = PlayerMaxHP;
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        //DontDestroyOnLoad(gameObject);
+        
         Enemy.GetComponent<Spawner>();
         col.GetComponent<Collider2D>();
     }
 
-    private void Start()
-    {
-        levelupUI.Select(0);
-    }
+
 
     private void Update()
     {
+        if (!IsLive) return;
+
         gameTime += Time.deltaTime;
         if (gameTime > maxgameTime)
         {
             gameTime = maxgameTime;
         }
 
-        /*if(IsPause)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }*/
         DevMode();
     }
 
+    public void GameStart(int id)
+    {
+        playerID = id;
+        PlayerHP = PlayerMaxHP;
+
+        player.gameObject.SetActive(true);
+        levelupUI.Select(playerID);
+        Resume();
+        SetExp();
+    }
+
+    public void GameOver()
+    {
+        StartCoroutine(GameOverCo());
+    }
+
+    private IEnumerator GameOverCo()
+    {
+        IsLive = false;
+
+        yield return new WaitForSeconds(2f);
+
+        Stop();
+    }
+
+    public void ToTitle()
+    {
+        SceneManager.LoadScene("Title");
+    }
 
 
     private void SetExp()
     {
-        NextExp[0] = 10;
+        NextExp[0] = 5;
         for (int level = 0; level < NextExp.Length - 1; level++)
         {
-            NextExp[level + 1] = NextExp[level] + 2;
+            NextExp[level + 1] = NextExp[level];
         }
     }
 
@@ -86,43 +116,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void HPDown()
-    {
-        PlayerHP -= Enemy.spawndata[Enemy.level].damage;
-
-        if (PlayerHP <= 0)
-        {
-            Debug.Log("Die");
-            //PlayerHP = 0;
-            StartCoroutine(DeadAnimation());
-        }
-    }
-
-    private IEnumerator DeadAnimation()
-    {
-        while (player.transform.position.y > -0.68f)
-        {
-            if (player.transform.localScale.y > 0.05)
-            {
-                player.transform.localScale -= new Vector3(0, Time.deltaTime, 0);
-            }
-            player.transform.position -= new Vector3(0, Time.deltaTime, 0);
-            yield return null;
-        }
-        col.enabled = false;
-
-    }
-
-
     public void Stop()
     {
-        IsPause = true;
+        IsLive = false;
         Time.timeScale = 0f;
     }
 
     public void Resume()
     {
-        IsPause = false;
+        IsLive = true;
         Time.timeScale = 1f;
     }
 

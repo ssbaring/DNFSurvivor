@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Item", menuName = "Scriptale Object/ItemData")]
 public class ItemData : ScriptableObject
 {
-    public enum ItemType { WeaponMaster, Asura, Soulbringer, Berserker, Cooltime, Range, Damage }
+    public enum ItemType { WeaponMaster, Asura, Soulbringer, Berserker, Cooltime, Range, Damage, Heal }
 
     [Header("Main Info")]
     public ItemType itemType;

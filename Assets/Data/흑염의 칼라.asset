@@ -23,8 +23,8 @@ MonoBehaviour:
   damage:
   - 0
   - 3
-  - 6
-  - 9
-  - 12
+  - 3
+  - 3
+  - 3
   count: 0000000000000000010000000100000001000000
   projectile: {fileID: 3117021814899693482, guid: 9532c07296de60d4db539b234b9e3277, type: 3}

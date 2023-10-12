@@ -40,7 +40,7 @@ public class Item : MonoBehaviour
                 }
                 else
                 {
-                    textDesc.text = string.Format("데미지 {0} 증가. 불꽃 {1}개 추가.", data.damage[level], data.count[level]);
+                    textDesc.text = string.Format("데미지 {0} 증가. \n불꽃 {1}개 추가.", data.damage[level], data.count[level]);
                 }
                 break;
             case ItemData.ItemType.WeaponMaster:
@@ -50,7 +50,7 @@ public class Item : MonoBehaviour
                 }
                 else if (level == 3)
                 {
-                    textDesc.text = string.Format("데미지 {0} 증가. \n발도 시전시 추가타를 시전합니다.", data.damage[level]);
+                    textDesc.text = string.Format("데미지 {0} 증가. \n발도 공격 후 후속타가 시전됩니다.", data.damage[level]);
                 }
                 else
                 {
@@ -82,6 +82,9 @@ public class Item : MonoBehaviour
             case ItemData.ItemType.Damage:
                 textDesc.text = string.Format(data.itemDescription, data.damage[level] * 100);
                 break;
+            case ItemData.ItemType.Heal:
+                textDesc.text = string.Format(data.itemDescription, 30);
+                break;
         }
     }
 
@@ -102,13 +105,14 @@ public class Item : MonoBehaviour
                 }
                 else
                 {
-                    float nextDamage = data.baseDamage;
+                    float nextDamage = 0;
                     int nextCount = 0;
                     nextDamage += data.damage[level];
                     nextCount += data.count[level];
 
                     skill.LevelUP(nextDamage, nextCount);
                 }
+                level++;
                 break;
             case ItemData.ItemType.Cooltime:
             case ItemData.ItemType.Damage:
@@ -124,10 +128,21 @@ public class Item : MonoBehaviour
                     float nextPotion = data.damage[level];
                     potion.LevelUp(nextPotion);
                 }
+                level++;
+                break;
+            case ItemData.ItemType.Heal:
+                if (GameManager.instance.PlayerMaxHP - GameManager.instance.PlayerHP > 30)
+                {
+                    GameManager.instance.PlayerHP += 30;
+                }
+                else
+                {
+                    GameManager.instance.PlayerHP = GameManager.instance.PlayerMaxHP;
+                }
                 break;
 
         }
-        level++;
+
         Debug.Log(level);
         if (level == data.damage.Length)
         {
@@ -135,5 +150,5 @@ public class Item : MonoBehaviour
         }
     }
 
-    
+
 }

@@ -14,9 +14,9 @@ public class LevelUP : MonoBehaviour
 
     public void Show()
     {
+        RandomSelect();
         rect.localScale = Vector3.one;
         GameManager.instance.Stop();
-        RandomSelect();
     }
 
     public void Hide()
@@ -54,7 +54,7 @@ public class LevelUP : MonoBehaviour
             Item randItem = items[rand[i]];
             if (randItem.level == randItem.data.damage.Length)
             {
-                
+                items[7].gameObject.SetActive(true);
             }
             else
             {

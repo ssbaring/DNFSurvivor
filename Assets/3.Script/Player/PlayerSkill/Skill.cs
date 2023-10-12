@@ -24,6 +24,8 @@ public class Skill : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.instance.IsLive) return;
+
         switch (id)
         {
             case 0:
@@ -34,11 +36,11 @@ public class Skill : MonoBehaviour
                 if (WMCoolTime > speed)
                 {
                     WMCoolTime = 0;
-                    if (WMLevel <= 1)
+                    if (WMLevel <= 2)
                     {
                         WeaponMaster();
                     }
-                    else if (WMLevel > 1)
+                    else if (WMLevel > 3)
                     {
                         StartCoroutine(ActiveTwice());
                     }
@@ -81,7 +83,7 @@ public class Skill : MonoBehaviour
 
     public void LevelUP(float damage, int count)
     {
-        this.damage = damage;
+        this.damage += damage;
         this.count += count;
         switch (id)
         {
