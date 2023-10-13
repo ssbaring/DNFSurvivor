@@ -22,7 +22,7 @@ public class Potion : MonoBehaviour
 
     public void LevelUp(float rate)
     {
-        this.rate = rate;
+        this.rate += rate;
         Apply();
     }
 

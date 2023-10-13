@@ -18,12 +18,15 @@ public class EnemyControl : MonoBehaviour
     private Animator anim;
     private SpriteRenderer spriteR;
 
+    public AudioClip Hit;
+    private AudioSource audio;
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         spriteR = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
+        audio = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()      //¹°¸®Àû
@@ -78,7 +81,8 @@ public class EnemyControl : MonoBehaviour
 
         HP -= collision.GetComponent<SkillManager>().damage;
         StartCoroutine(KnockBack());
-        
+        audio.clip = Hit;
+        audio.Play();
 
         if (HP > 0)
         {

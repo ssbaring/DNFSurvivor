@@ -11,7 +11,10 @@ public class GameManager : MonoBehaviour
     public PoolManager pool;
     public Spawner Enemy;
     public Collider2D col;
-    
+
+    AudioSource audio;
+    public AudioClip BGM;
+    public GameObject BGMobj;
 
     [Header("GameTime")]
     public float gameTime;
@@ -30,6 +33,11 @@ public class GameManager : MonoBehaviour
     public LevelUP levelupUI;
     public static bool IsPause = false;
     public bool IsLive;
+    public bool IsStart = false;
+
+
+    [Header("DeveloperMode")]
+    public GameObject Dev;
 
 
 
@@ -43,10 +51,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        //DontDestroyOnLoad(gameObject);
-        
+
         Enemy.GetComponent<Spawner>();
         col.GetComponent<Collider2D>();
+        audio = GetComponent<AudioSource>();
     }
 
 
@@ -55,11 +63,11 @@ public class GameManager : MonoBehaviour
     {
         if (!IsLive) return;
 
-        gameTime += Time.deltaTime;
-        if (gameTime > maxgameTime)
+        if (IsStart)
         {
-            gameTime = maxgameTime;
+            gameTime += Time.deltaTime;
         }
+
 
         DevMode();
     }
@@ -68,6 +76,11 @@ public class GameManager : MonoBehaviour
     {
         playerID = id;
         PlayerHP = PlayerMaxHP;
+        IsStart = true;
+        BGMobj = GameObject.Find("BGM");
+        BGMobj.SetActive(false);
+        audio.clip = BGM;
+        audio.Play();
 
         player.gameObject.SetActive(true);
         levelupUI.Select(playerID);
@@ -80,13 +93,25 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GameOverCo());
     }
 
+
     private IEnumerator GameOverCo()
     {
-        IsLive = false;
+        //IsLive = false;
+        Item.index_s = 0;
+        Item.index_p = 0;
 
         yield return new WaitForSeconds(2f);
-
+        Destroy(BGMobj);
         Stop();
+    }
+    public void GameClear()
+    {
+        if (gameTime > maxgameTime)
+        {
+            gameTime = maxgameTime;
+            Stop();
+            Debug.Log("클리어!");
+        }
     }
 
     public void ToTitle()
@@ -100,7 +125,7 @@ public class GameManager : MonoBehaviour
         NextExp[0] = 5;
         for (int level = 0; level < NextExp.Length - 1; level++)
         {
-            NextExp[level + 1] = NextExp[level];
+            NextExp[level + 1] = NextExp[level] + 5;
         }
     }
 
@@ -108,7 +133,7 @@ public class GameManager : MonoBehaviour
     {
         exp++;
 
-        if (exp == NextExp[Mathf.Min(level,NextExp.Length - 1)])
+        if (exp == NextExp[Mathf.Min(level, NextExp.Length - 1)])
         {
             level++;
             exp = 0;
@@ -133,7 +158,14 @@ public class GameManager : MonoBehaviour
     //개발자 모드
     private void DevMode()
     {
-
+        if (Input.GetKeyDown(KeyCode.P) && Dev.activeSelf == false)
+        {
+            Dev.SetActive(true);
+        }
+        else if(Input.GetKeyDown(KeyCode.P) && Dev.activeSelf == true)
+        {
+            Dev.SetActive(false);
+        }
 
     }
 

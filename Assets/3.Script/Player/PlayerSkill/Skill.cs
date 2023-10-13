@@ -40,8 +40,9 @@ public class Skill : MonoBehaviour
                     {
                         WeaponMaster();
                     }
-                    else if (WMLevel > 3)
+                    else if (WMLevel > 2)
                     {
+                        StopCoroutine(ActiveTwice());
                         StartCoroutine(ActiveTwice());
                     }
                 }

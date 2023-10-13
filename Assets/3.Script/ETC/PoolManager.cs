@@ -16,7 +16,6 @@ public class PoolManager : MonoBehaviour
         {
             pool[i] = new List<GameObject>();       //배열의 리스트 초기화
         }
-
     }
 
     public GameObject GetPool(int index)

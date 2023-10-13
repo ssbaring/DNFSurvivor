@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 public class Title : MonoBehaviour
 {
     public GameObject[] title;
+    public int id;
 
+    
+ 
     public void StartGame()
     {
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("Loading");
     }
 
 
@@ -30,6 +33,7 @@ public class Title : MonoBehaviour
     {
         Application.Quit();
     }
+
 
 
 }

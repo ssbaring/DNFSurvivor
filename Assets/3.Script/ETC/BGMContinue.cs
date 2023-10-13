@@ -6,11 +6,14 @@ public class BGMContinue : MonoBehaviour
 {
     private void Start()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
-    public void StopMusic()
+    private void Update()
     {
-
+        if (gameObject.activeSelf == false)
+        {
+            gameObject.SetActive(true);
+        }
     }
 }

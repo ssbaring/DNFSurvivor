@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float MoveSpeed;           //캐릭터 속도
     [SerializeField] private GameObject Player;         //캐릭터 오브젝트
     [SerializeField] private GameObject GameOver;
+    [SerializeField] private Button btn;
 
     private Animator anim;
     private SpriteRenderer sprite;
     public Vector2 InputVector;
     private Rigidbody2D rigid;
+    private Collider2D col;
     public Scanner scan;
 
     private AudioSource audio;
@@ -26,6 +29,8 @@ public class PlayerController : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         scan = GetComponent<Scanner>();
         audio = GetComponent<AudioSource>();
+        col = GetComponent<Collider2D>();
+        MoveSpeed = 5f;
     }
 
     private void Update()
@@ -90,10 +95,14 @@ public class PlayerController : MonoBehaviour
 
             sprite.flipX = false;
             anim.SetTrigger("Dead");
+            col.enabled = false;
             audio.clip = deadclip;
             audio.Play();
+            MoveSpeed = 0;
             GameOver.SetActive(true);
+            btn.gameObject.SetActive(false);
             GameManager.instance.GameOver();
+            StartCoroutine(WaitButton());
         }
     }
 
@@ -101,6 +110,12 @@ public class PlayerController : MonoBehaviour
     {
         yield return wfu;
         GameManager.instance.PlayerHP -= GameManager.instance.Enemy.spawndata[GameManager.instance.Enemy.level].damage;
+    }
+
+    private IEnumerator WaitButton()
+    {
+        yield return new WaitForSeconds(1.5f);
+        btn.gameObject.SetActive(true);
     }
 
 }

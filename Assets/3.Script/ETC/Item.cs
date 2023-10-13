@@ -9,9 +9,12 @@ public class Item : MonoBehaviour
     public int level;
     public Skill skill;
     public Potion potion;
+    public Image[] UsingSkillIcon;
+    public Image[] UsingPotionIcon;
 
 
-
+    static public int index_s = 0;             //스킬의 배열
+    static public int index_p = 0;             //포션의 배열
     private Image icon;
     private Text textLevel;
     private Text textName;
@@ -100,8 +103,12 @@ public class Item : MonoBehaviour
                 if (level == 0)
                 {
                     GameObject newSkill = new GameObject();
+                    UsingSkillIcon = GameObject.Find("Skill Icon").GetComponentsInChildren<Image>();
                     skill = newSkill.AddComponent<Skill>();
                     skill.Init(data);
+                    UsingSkillIcon[index_s].sprite = data.itemIcon;
+                    UsingSkillIcon[index_s].color = new Color(1, 1, 1, 1);
+                    index_s++;
                 }
                 else
                 {
@@ -120,8 +127,12 @@ public class Item : MonoBehaviour
                 if (level == 0)
                 {
                     GameObject newPotion = new GameObject();
+                    UsingPotionIcon = GameObject.Find("Potion Icon").GetComponentsInChildren<Image>();
                     potion = newPotion.AddComponent<Potion>();
                     potion.Init(data);
+                    UsingPotionIcon[index_p].sprite = data.itemIcon;
+                    UsingPotionIcon[index_p].color = new Color(1, 1, 1, 1);
+                    index_p++;
                 }
                 else
                 {
@@ -143,7 +154,6 @@ public class Item : MonoBehaviour
 
         }
 
-        Debug.Log(level);
         if (level == data.damage.Length)
         {
             GetComponent<Button>().interactable = false;
