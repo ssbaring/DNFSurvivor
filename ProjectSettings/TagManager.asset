@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Area
+  - Enemy
+  - Weapon
+  - BGM
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - PlayerSkill
+  - Water
+  - UI
+  - Player
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: PlayerSkill
+    uniqueID: 2335848551
+    locked: 0
+  - name: Player
+    uniqueID: 2914412551
+    locked: 0

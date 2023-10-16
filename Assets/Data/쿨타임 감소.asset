@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb128e88d2391084f8431709e190b936, type: 3}
+  m_Name: "\uCFE8\uD0C0\uC784 \uAC10\uC18C"
+  m_EditorClassIdentifier: 
+  itemType: 4
+  itemID: 4
+  itemName: "\uC815\uC2E0 \uC790\uADF9\uC758 \uBE44\uC57D"
+  itemDescription: "\uC2A4\uD0AC \uCFE8\uD0C0\uC784\uC774 {0}% \uAC10\uC18C\uD569\uB2C8\uB2E4."
+  itemIcon: {fileID: 21300000, guid: 09b6c95a162dda848a8501c51a94c1d1, type: 3}
+  baseDamage: 0
+  baseCount: 0
+  damage:
+  - 0.1
+  - 0.1
+  - 0.1
+  - 0.1
+  - 0.1
+  count: 0000000000000000000000000000000000000000
+  projectile: {fileID: 0}
