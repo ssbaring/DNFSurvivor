@@ -16,7 +16,7 @@ public class Skill : MonoBehaviour
     private float BSKCoolTime;
 
     private PlayerController player;
-
+        
     private void Awake()
     {
         player = GameManager.instance.player;
