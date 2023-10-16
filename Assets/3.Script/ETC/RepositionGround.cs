@@ -5,6 +5,7 @@ using UnityEngine;
 public class RepositionGround : MonoBehaviour
 {
     Collider2D coll;        //모든 Collider2D 포함
+    [SerializeField] private int RangeTileSet;
     private void Awake()
     {
         coll = GetComponent<Collider2D>();

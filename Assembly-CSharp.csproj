@@ -85,6 +85,7 @@
     <Compile Include="Assets\3.Script\ETC\BGMContinue.cs" />
     <Compile Include="Assets\3.Script\ETC\UsingSkillList.cs" />
     <Compile Include="Assets\3.Script\Title\Title.cs" />
+    <Compile Include="Assets\3.Script\ETC\ScreenSize.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
